@@ -14,22 +14,22 @@ export default [
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
-        project: true
+        project: true,
       },
       globals: {
         ...globals.browser,
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
     plugins: {
       react,
       'react-hooks': reactHooks,
-      prettier: pluginPrettier
+      prettier: pluginPrettier,
     },
     settings: {
       react: {
-        version: 'detect'
-      }
+        version: 'detect',
+      },
     },
     rules: {
       // Regras principais
@@ -40,16 +40,19 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
 
-      // Suas regras personalizadas
+      // Regras personalizadas
       quotes: ['error', 'single'],
       semi: ['error', true],
       'max-len': ['error', { code: 120 }],
       'padding-line-between-statements': ['error', { blankLine: 'always', prev: 'function', next: 'function' }],
       'sort-imports': ['error', { ignoreDeclarationSort: true }],
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'prefer-arrow-callback': 'error',
-      indent: ['error', 2]
-    }
+      indent: ['error', 2],
+
+      // ✅ Validação de variáveis não utilizadas
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    },
   },
-  prettier
+  prettier,
 ];
