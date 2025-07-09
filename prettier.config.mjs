@@ -5,7 +5,7 @@ export default {
   useTabs: false,
   tabWidth: 2,
   printWidth: 120,
-  trailingComma: 'none',
+  trailingComma: 'all',
   bracketSpacing: true,
   arrowParens: 'avoid',
   endOfLine: 'lf',
