@@ -7,5 +7,6 @@ export default {
   printWidth: 120,
   trailingComma: 'none',
   bracketSpacing: true,
-  arrowParens: 'avoid'
+  arrowParens: 'avoid',
+  endOfLine: 'lf',
 };
