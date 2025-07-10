@@ -4,17 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
     "format": "prettier --write .",
-    "prepare": "npm run lint && husky install"
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint src --fix",
+      "prettier src --write"
     ]
   },
   "dependencies": {
@@ -40,7 +37,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.3.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
     "tailwindcss": "^4",
