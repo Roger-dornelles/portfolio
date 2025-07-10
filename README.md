@@ -10,6 +10,9 @@
 
 - Next.js
 - TypeScript
+- Husky
+- Prettier
+- Eslint
 
 ```bash
 
