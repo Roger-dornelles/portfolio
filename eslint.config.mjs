@@ -47,7 +47,7 @@ export default [
       // Variáveis, funções e hooks não usados
       'no-unused-vars': 'off', // desativa padrão ESLint
       '@typescript-eslint/no-unused-vars': [
-        'warn', // erro para não usados
+        'error', // erro para não usados
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
 
@@ -59,6 +59,8 @@ export default [
       'sort-imports': ['error', { ignoreDeclarationSort: true }],
       'prefer-arrow-callback': 'error',
       indent: ['error', 2],
+
+      // Você pode adicionar mais regras aqui
     },
   },
   prettier,
