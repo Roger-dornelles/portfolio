@@ -46,7 +46,7 @@ const Home = () => {
             <div className="py-3">
               <TextFadeIn
                 timer={700}
-                text={` Trabalho com tecnologias como React, Next.js, TypeScript, Node.js, sempre buscando aplicar as melhores
+                text={` Trabalho com tecnologias como React, Next.js, TypeScript, TailwindCss, Node.js, PostgreSQL, Git, Jest e sempre buscando aplicar as melhores
               práticas de desenvolvimento, versionamento, acessibilidade e design responsivo.`}
               />
             </div>
@@ -70,8 +70,14 @@ const Home = () => {
           <ImageAnimation src={`/images/avatar.png`} alt="Avatar" width={250} height={250} positionAnimation="y" />
         </div>
       </div>
-      <div className={`relative w-full h-[13rem] mt-[-.5rem]`}>
+      <div className={`relative w-full h-[5rem] mt-[-.5rem]`}>
         <Image src={`/images/border-curve.jpg`} alt="Imagem curva" priority fill className="object-cover" />
+      </div>
+
+      <div className={`m-auto w-full`}>
+        <div className="flex text-4xl font-bold w-[85%] justify-center m-auto">
+          <TextFadeIn timer={200} text={`Projetos`} />
+        </div>
       </div>
     </motion.section>
   );
