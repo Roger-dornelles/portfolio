@@ -10,6 +10,7 @@
 
 - Next.js
 - TypeScript
+- TailwindCss
 - Husky
 - Prettier
 - Eslint
