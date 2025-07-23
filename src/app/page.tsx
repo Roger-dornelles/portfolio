@@ -33,31 +33,29 @@ const Home = () => {
               />
             </div>
 
-            <div>
-              <TextFadeIn
-                timer={500}
-                text="Ao longo da minha jornada, participei de projetos voltados para o setor jurídico, construção civil e
+            <TextFadeIn
+              timer={500}
+              text="Ao longo da minha jornada, participei de projetos voltados para o setor jurídico, construção civil e
               soluções internas de gestão e beneficiamento de materiais. Nessas experiências, atuei tanto no
               desenvolvimento de sistemas completos quanto na criação de interfaces modernas e responsivas, pensando na
               experiência do usuário, performance e escalabilidade."
-              />
-            </div>
+            />
 
             <div className="py-3">
               <TextFadeIn
                 timer={700}
-                text={` Trabalho com tecnologias como React, Next.js, TypeScript, Node.js, sempre buscando aplicar as melhores
-              práticas de desenvolvimento, versionamento, acessibilidade e design responsivo.`}
+                text={` Trabalho com tecnologias como React, Next.js, TypeScript, TailwindCss, Node.js, PostgreSQL, Git, 
+                  Jest e sempre buscando aplicar as melhores
+                  práticas de desenvolvimento, versionamento, acessibilidade e design responsivo.
+              `}
               />
             </div>
 
-            <div>
-              <TextFadeIn
-                timer={900}
-                text={`Gosto de aprender constantemente, e criar produtos que realmente gerem valor para os usuários e para o
+            <TextFadeIn
+              timer={900}
+              text={`Gosto de aprender constantemente, e criar produtos que realmente gerem valor para os usuários e para o
               negócio.`}
-              />
-            </div>
+            />
 
             <div className="py-3">
               <TextFadeIn
@@ -70,8 +68,43 @@ const Home = () => {
           <ImageAnimation src={`/images/avatar.png`} alt="Avatar" width={250} height={250} positionAnimation="y" />
         </div>
       </div>
-      <div className={`relative w-full h-[13rem] mt-[-.5rem]`}>
+
+      <div className={`relative w-full h-[5rem] mt-[-.5rem]`}>
         <Image src={`/images/border-curve.jpg`} alt="Imagem curva" priority fill className="object-cover" />
+      </div>
+
+      <div
+        className={`flex flex-col justify-center m-auto w-full text-left px-3 md:w-[85%] text-2xl py-[2rem] text-[#0A001B]  
+            md:text-[1.2rem] tracking-[.02rem]
+          `}
+      >
+        <div className="text-4xl font-bold justify-center m-auto pb-6">
+          <TextFadeIn timer={200} text={`Projetos`} />
+        </div>
+
+        <div className="pb-3">
+          <TextFadeIn
+            text={`Ao longo do processo de aprendizado em desenvolvimento de software, desenvolvi projetos que colocaram 
+                em prática os conhecimentos adquiridos.
+              `}
+            timer={350}
+          />
+        </div>
+
+        <TextFadeIn
+          text={`Cada projeto apresentado abaixo marca uma fase da minha evolução como desenvolvedor, 
+              cada linha de código representa curiosidade, tentativas, erros, acertos e progresso.
+            `}
+          timer={450}
+        />
+        <div className="py-3">
+          <TextFadeIn
+            text={`Esses projetos refletem desafios superados, aprendizados consolidados e a minha paixão 
+              por transformar ideias em soluções reais, funcionais e bem estruturadas.
+            `}
+            timer={550}
+          />
+        </div>
       </div>
     </motion.section>
   );
