@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+
 import { motion } from 'framer-motion';
 
 import Typewriter from './components/Typewriter';
@@ -8,6 +8,8 @@ import ImageAnimation from './components/ImageAnimation';
 import Card from './components/Card';
 
 import Projects from '@/utils/Projects';
+import Footer from './components/Footer';
+import SVGCurveTop from './components/SVGCurveTop';
 
 const Home = () => {
   return (
@@ -72,8 +74,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={`relative w-full h-[5rem] mt-[-.5rem]`}>
-        <Image src={`/images/border-curve.jpg`} alt="Imagem curva" priority fill className="object-cover" />
+      <div className={` w-full h-[5rem] mt-[-.5rem]`}>
+        <SVGCurveTop />
       </div>
 
       <div
@@ -125,6 +127,7 @@ const Home = () => {
           })}
         </div>
       </div>
+      <Footer />
     </motion.section>
   );
 };

@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Roger - Portifólio',
   description: 'portfolio creation',
+  icons: {
+    icon: '/favicon-v1.ico',
+  },
 };
 
 const RootLayout = ({
