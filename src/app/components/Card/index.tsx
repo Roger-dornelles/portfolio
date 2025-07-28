@@ -25,7 +25,7 @@ const Card = ({ id, project, descriptionProject, img, urlGit, urlWeb }: CardProp
         width={200}
         height={300}
         priority
-        className={`object-cover w-[16rem] h-[7rem] hover:scale-140 transition-all ease-in duration-[.3s] rounded-[.5rem] cursor-pointer z-2`}
+        className={`object-cover w-[16rem] h-[7rem] hover:scale-140 transition-all ease-in duration-[.3s] rounded-[.5rem] z-2`}
       />
 
       <p className="pt-2 flex-wrap">{descriptionProject}</p>
