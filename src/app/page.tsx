@@ -1,10 +1,13 @@
 'use client';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import Typewriter from './components/Typewriter';
 import TextFadeIn from './components/TextFadeIn';
-import { motion } from 'framer-motion';
 import ImageAnimation from './components/ImageAnimation';
+import Card from './components/Card';
+
+import Projects from '@/utils/Projects';
 
 const Home = () => {
   return (
@@ -104,6 +107,22 @@ const Home = () => {
             `}
             timer={550}
           />
+        </div>
+
+        <div className={`flex flex-wrap w-[85%] m-auto gap-4 pt-6`}>
+          {Projects.map(item => {
+            return (
+              <Card
+                key={item.id}
+                id={item.id}
+                img={item.img}
+                project={item.project}
+                urlGit={item.urlGit}
+                urlWeb={item.urlWeb}
+                descriptionProject={item.descriptionProject}
+              />
+            );
+          })}
         </div>
       </div>
     </motion.section>
