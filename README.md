@@ -1,8 +1,7 @@
 # :computer: PORTIFOLIO
 
-## :rotating_light: Em Desenvolvimento :rotating_light:
 
-## Criação do Portifolio
+## :round_pushpin: Criação do Portifolio
 
 - Criação do meu portifolio para mostrar as tecnologias que tenho conhecimento e minhas experiencias.
 
@@ -15,7 +14,7 @@ Link do PortFólio:
 
 -----------------------------
 
-### 🔧 Tecnologias usadas.
+### :clipboard: Tecnologias usadas.
 
 - Next.js
 - TypeScript
@@ -33,7 +32,7 @@ Ele representa minha evolução contínua, minha curiosidade em aprender e meu c
 
 -----------------------------
 
-### Instalação
+### :wrench: Instalação
 
 No terminal ( prompt de comando ou CMD ) fazer o clone do projeto com o comando
 
