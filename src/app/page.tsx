@@ -1,15 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
-import Typewriter from './components/Typewriter';
-import TextFadeIn from './components/TextFadeIn';
-import ImageAnimation from './components/ImageAnimation';
-import Card from './components/Card';
-
+import Card from '@/components/Card';
+import Footer from '@/components/Footer';
+import ImageAnimation from '@/components/ImageAnimation';
+import SVGCurveTop from '@/components/SVGCurveTop';
+import TextFadeIn from '@/components/TextFadeIn';
+import Typewriter from '@/components/Typewriter';
 import Projects from '@/utils/Projects';
-import Footer from './components/Footer';
-import SVGCurveTop from './components/SVGCurveTop';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
