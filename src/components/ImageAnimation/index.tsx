@@ -19,7 +19,7 @@ const ImageAnimation = ({ positionAnimation, src, alt, width, height, timer = 10
     }, timer);
 
     return () => clearTimeout(timers);
-  }, []);
+  }, [timer]);
 
   return (
     <Image
