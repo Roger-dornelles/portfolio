@@ -40,7 +40,7 @@ export default [
       'Criado para adicionar tarefas a serem feitas no decorrer do dia, assim que concluida pode-se fazer a marcação de concluida',
     img: '/images/todoList.png',
     urlGit: 'https://github.com/Roger-dornelles/Todo-list',
-    urlWeb: 'https://todo-list-zeta-eight.vercel.app/',
+    urlWeb: 'https://todo-list-blond-tau.vercel.app/',
   },
   {
     id: 6,
