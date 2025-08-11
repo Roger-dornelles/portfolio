@@ -16,7 +16,7 @@ type SlideProps = {
 };
 
 const Slide = ({ images }: SlideProps) => {
-  const [current, setCurrent] = useState(2);
+  const [current, setCurrent] = useState(0);
   const [xOffset, setXOffset] = useState(120);
 
   useEffect(() => {
@@ -87,7 +87,7 @@ const Slide = ({ images }: SlideProps) => {
             >
               <Image
                 src={item.img}
-                alt={`Imagem ${index + 1}`}
+                alt={`Imagem ${item.tecnology}`}
                 width={260}
                 height={320}
                 className="
