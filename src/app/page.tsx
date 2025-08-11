@@ -125,6 +125,40 @@ const Home = () => {
           })}
         </div>
       </div>
+
+      <div
+        className={`flex flex-col justify-center m-auto w-full text-left px-3 md:w-[85%] text-2xl py-[2rem] text-[#0A001B]  
+            md:text-[1.2rem] tracking-[.02rem]
+          `}
+      >
+        <div className="text-4xl font-bold justify-center m-auto pb-6">
+          <TextFadeIn
+            text={`Tecnologias
+            `}
+            timer={550}
+          />
+        </div>
+
+        <div className="py-3">
+          <TextFadeIn
+            text={`Tenho experiência em desenvolvimento de aplicações web e mobile utilizando React.js, Next.js e React Native, 
+              com integração de APIs em Node.js. 
+              
+            `}
+            timer={750}
+          />
+        </div>
+
+        <div>
+          <TextFadeIn
+            text={`
+              Conhecimento em testes automatizados com Jest, React Testing Library e Cypress, além de bancos de dados relacionais 
+              como MySQL e PostgreSQL.
+            `}
+            timer={950}
+          />
+        </div>
+      </div>
       <Footer />
     </motion.section>
   );
