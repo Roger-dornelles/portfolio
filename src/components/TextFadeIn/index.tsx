@@ -16,7 +16,7 @@ const TextFadeIn = ({ text, timer = 1000 }: TextFadeInProps) => {
     }, timer);
 
     return () => clearTimeout(timers);
-  }, []);
+  }, [timer]);
 
   return (
     <div
