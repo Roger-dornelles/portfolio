@@ -1,12 +1,21 @@
-const images = ['/images/NextJs.png', '/images/ReactJs.png', '/images/NodeJs.png', '/images/Typescript.png'];
-
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { GoArrowRight } from 'react-icons/go';
-import { GoArrowLeft } from 'react-icons/go';
+import { GoArrowLeft, GoArrowRight } from 'react-icons/go';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
-const Slide = () => {
+interface Images {
+  id: number;
+  description: string;
+  tecnology: string;
+  img: string | StaticImport;
+}
+
+type SlideProps = {
+  images: Images[];
+};
+
+const Slide = ({ images }: SlideProps) => {
   const [current, setCurrent] = useState(2);
   const [xOffset, setXOffset] = useState(120);
 
@@ -31,7 +40,7 @@ const Slide = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-[#ffffff] px-4">
       <div className="relative w-full max-w-7xl h-[400px] sm:h-[500px] flex items-center justify-center">
-        {images.map((src, index) => {
+        {images.map((item, index) => {
           const total = images.length;
           const prev = (current - 1 + total) % total;
           const next = (current + 1) % total;
@@ -77,11 +86,21 @@ const Slide = () => {
               }}
             >
               <Image
-                src={src}
+                src={item.img}
                 alt={`Imagem ${index + 1}`}
-                width={240}
+                width={260}
                 height={320}
-                className="relative w-[120px] h-auto sm:w-[260px] sm:h-[320px] object-cover rounded-xl shadow-lg"
+                className="
+                  w-[140px] h-[180px]
+                  sm:w-[200px] sm:h-[260px]
+                  lg:w-[260px] lg:h-[320px]
+                  object-contain
+                  rounded-xl
+                  shadow-lg
+                  border-[1px]
+                  border-[#ccc]
+                  bg-white
+                "
               />
             </motion.div>
           );
@@ -89,16 +108,10 @@ const Slide = () => {
       </div>
 
       <div className="mt-[-2rem] mb-[1rem] flex gap-10 z-[2]">
-        <button
-          onClick={handlePrev}
-          className="text-3xl px-2 bg-[#ececec] py-2 rounded-[50%] transition cursor-pointer"
-        >
+        <button onClick={handlePrev} className="text-3xl px-2 bg-[#ececec] py-2 rounded-full transition cursor-pointer">
           <GoArrowLeft />
         </button>
-        <button
-          onClick={handleNext}
-          className="text-3xl px-2 py-2 rounded-[50%] bg-[#ececec] transition cursor-pointer"
-        >
+        <button onClick={handleNext} className="text-3xl px-2 py-2 rounded-full bg-[#ececec] transition cursor-pointer">
           <GoArrowRight />
         </button>
       </div>

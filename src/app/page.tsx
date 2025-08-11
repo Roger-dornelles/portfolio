@@ -3,9 +3,11 @@
 import Card from '@/components/Card';
 import Footer from '@/components/Footer';
 import ImageAnimation from '@/components/ImageAnimation';
+import Slide from '@/components/Slide';
 import SVGCurveTop from '@/components/SVGCurveTop';
 import TextFadeIn from '@/components/TextFadeIn';
 import Typewriter from '@/components/Typewriter';
+import DescriptionTecnology from '@/utils/DescriptionTecnology';
 import Projects from '@/utils/Projects';
 import { motion } from 'framer-motion';
 
@@ -158,6 +160,7 @@ const Home = () => {
             timer={950}
           />
         </div>
+        <Slide images={DescriptionTecnology} />
       </div>
       <Footer />
     </motion.section>
