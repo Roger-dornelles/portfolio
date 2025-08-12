@@ -28,49 +28,41 @@ const Home = () => {
         <div className={`flex flex-col items-center p-[3rem] w-full md:text-[1.2rem] lg:flex-row`}>
           <div className={`flex-col items-end text-white text-2xl md:text-[1.2rem] tracking-[.02rem] md:px-[3rem]`}>
             <div className="text-2xl">
-              <Typewriter delay={30} text="Olá! Sou o Roger." />
+              <Typewriter delay={50} text="Olá! Sou o Roger." />
             </div>
 
             <div className="py-3">
-              <TextFadeIn
-                timer={300}
-                text="Sou desenvolvedor Full Stack com foco em Front-end, apaixonado por tecnologia."
-              />
+              <TextFadeIn>Sou desenvolvedor Full Stack com foco em Front-end, apaixonado por tecnologia.</TextFadeIn>
             </div>
 
-            <TextFadeIn
-              timer={500}
-              text="Ao longo da minha jornada, participei de projetos voltados para o setor jurídico, construção civil e
+            <TextFadeIn>
+              Ao longo da minha jornada, participei de projetos voltados para o setor jurídico, construção civil e
               soluções internas de gestão e beneficiamento de materiais. Nessas experiências, atuei tanto no
               desenvolvimento de sistemas completos quanto na criação de interfaces modernas e responsivas, pensando na
-              experiência do usuário, performance e escalabilidade."
-            />
+              experiência do usuário, performance e escalabilidade.
+            </TextFadeIn>
 
             <div className="py-3">
-              <TextFadeIn
-                timer={700}
-                text={` Trabalho com tecnologias como React, Next.js, TypeScript, TailwindCss, Node.js, PostgreSQL, Git, 
-                  Jest e sempre buscando aplicar as melhores
-                  práticas de desenvolvimento, versionamento, acessibilidade e design responsivo.
-              `}
-              />
+              <TextFadeIn>
+                Trabalho com tecnologias como React, Next.js, TypeScript, TailwindCss, Node.js, PostgreSQL, Git, Jest e
+                sempre buscando aplicar as melhores práticas de desenvolvimento, versionamento, acessibilidade e design
+                responsivo.
+              </TextFadeIn>
             </div>
 
-            <TextFadeIn
-              timer={900}
-              text={`Gosto de aprender constantemente, e criar produtos que realmente gerem valor para os usuários e para o
-              negócio.`}
-            />
+            <TextFadeIn>
+              Gosto de aprender constantemente, e criar produtos que realmente gerem valor para os usuários e para o
+              negócio.
+            </TextFadeIn>
 
             <div className="py-3">
-              <TextFadeIn
-                timer={1100}
-                text={`Estou em busca de novos desafios, projetos criativos e oportunidades de evolução profissional.`}
-              />
+              <TextFadeIn>
+                Estou em busca de novos desafios, projetos criativos e oportunidades de evolução profissional.
+              </TextFadeIn>
             </div>
           </div>
 
-          <ImageAnimation src={`/images/avatar.png`} alt="Avatar" width={250} height={250} positionAnimation="y" />
+          <ImageAnimation src={`/images/avatar.png`} alt="Avatar" width={250} height={250} positionAnimation="x" />
         </div>
       </div>
 
@@ -84,31 +76,25 @@ const Home = () => {
           `}
       >
         <div className="text-4xl font-bold justify-center m-auto pb-6">
-          <TextFadeIn timer={200} text={`Projetos`} />
+          <TextFadeIn>Projetos</TextFadeIn>
         </div>
 
         <div className="pb-3">
-          <TextFadeIn
-            text={`Ao longo do processo de aprendizado em desenvolvimento de software, desenvolvi projetos que colocaram 
-                em prática os conhecimentos adquiridos.
-              `}
-            timer={350}
-          />
+          <TextFadeIn>
+            Ao longo do processo de aprendizado em desenvolvimento de software, desenvolvi projetos que colocaram em
+            prática os conhecimentos adquiridos.
+          </TextFadeIn>
         </div>
 
-        <TextFadeIn
-          text={`Cada projeto apresentado abaixo marca uma fase da minha evolução como desenvolvedor, 
-              cada linha de código representa curiosidade, tentativas, erros, acertos e progresso.
-            `}
-          timer={450}
-        />
+        <TextFadeIn>
+          Cada projeto apresentado abaixo marca uma fase da minha evolução como desenvolvedor, cada linha de código
+          representa curiosidade, tentativas, erros, acertos e progresso.
+        </TextFadeIn>
         <div className="py-3">
-          <TextFadeIn
-            text={`Esses projetos refletem desafios superados, aprendizados consolidados e a minha paixão 
-              por transformar ideias em soluções reais, funcionais e bem estruturadas.
-            `}
-            timer={550}
-          />
+          <TextFadeIn>
+            Esses projetos refletem desafios superados, aprendizados consolidados e a minha paixão por transformar
+            ideias em soluções reais, funcionais e bem estruturadas.
+          </TextFadeIn>
         </div>
 
         <div className={`flex flex-wrap w-[85%] m-auto gap-4 pt-6`}>
@@ -134,31 +120,21 @@ const Home = () => {
           `}
       >
         <div className="text-4xl font-bold justify-center m-auto pb-6">
-          <TextFadeIn
-            text={`Tecnologias
-            `}
-            timer={550}
-          />
+          <TextFadeIn>Tecnologias</TextFadeIn>
         </div>
 
         <div className="py-3">
-          <TextFadeIn
-            text={`Tenho experiência em desenvolvimento de aplicações web e mobile utilizando React.js, Next.js e React Native, 
-              com integração de APIs em Node.js. 
-              
-            `}
-            timer={750}
-          />
+          <TextFadeIn>
+            Tenho experiência em desenvolvimento de aplicações web e mobile utilizando React.js, Next.js e React Native,
+            com integração de APIs em Node.js.
+          </TextFadeIn>
         </div>
 
         <div>
-          <TextFadeIn
-            text={`
-              Conhecimento em testes automatizados com Jest, React Testing Library e Cypress, além de bancos de dados relacionais 
-              como MySQL e PostgreSQL.
-            `}
-            timer={950}
-          />
+          <TextFadeIn>
+            Conhecimento em testes automatizados com Jest, React Testing Library e Cypress, além de bancos de dados
+            relacionais como MySQL e PostgreSQL.
+          </TextFadeIn>
         </div>
         <Slide images={DescriptionTecnology} />
       </div>
