@@ -1,31 +1,26 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 interface TextFadeInProps {
-  text: string;
-  timer?: number;
+  children: React.ReactNode;
+  delay?: number;
 }
 
-const TextFadeIn = ({ text, timer = 1000 }: TextFadeInProps) => {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    const timers = setTimeout(() => {
-      setShow(true);
-    }, timer);
-
-    return () => clearTimeout(timers);
-  }, [timer]);
+const TextFadeIn = ({ delay = 0, children }: TextFadeInProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: '-10px' });
 
   return (
-    <div
-      className={`transition-all duration-700 ease-out transform ${
-        show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-      }`}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 10 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+      transition={{ duration: 0.8, delay }}
     >
-      <p>{text}</p>
-    </div>
+      {children}
+    </motion.div>
   );
 };
 

@@ -1,36 +1,44 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 interface ImageAnimationProps {
-  timer?: number;
   positionAnimation: 'y' | 'x';
   src: string;
   alt: string;
   width: number;
   height: number;
+  distance?: number;
+  duration?: number;
 }
 
-const ImageAnimation = ({ positionAnimation, src, alt, width, height, timer = 1000 }: ImageAnimationProps) => {
-  const [show, setShow] = useState(false);
+const ImageAnimation = ({
+  positionAnimation,
+  src,
+  alt,
+  width,
+  height,
+  distance = 20,
+  duration = 1,
+}: ImageAnimationProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
 
-  useEffect(() => {
-    const timers = setTimeout(() => {
-      setShow(true);
-    }, timer);
+  // Define animação baseado na direção
+  const initialPosition = positionAnimation === 'x' ? { opacity: 0, x: distance } : { opacity: 0, y: distance };
 
-    return () => clearTimeout(timers);
-  }, [timer]);
+  const finalPosition = positionAnimation === 'x' ? { opacity: 1, x: 0 } : { opacity: 1, y: 0 };
 
   return (
-    <Image
-      alt={alt}
-      src={src}
-      width={width}
-      height={height}
-      className={`transition-all duration-800 ease transform ${
-        show ? `opacity-100 translate-${positionAnimation}-0` : `opacity-0 translate-${positionAnimation}-6`
-      }`}
-    />
+    <motion.div
+      ref={ref}
+      initial={initialPosition}
+      animate={isInView ? finalPosition : initialPosition}
+      transition={{ duration }}
+      className="w-full flex md:justify-center"
+    >
+      <Image alt={alt} src={src} width={width} height={height} className="object-cover" />
+    </motion.div>
   );
 };
 
