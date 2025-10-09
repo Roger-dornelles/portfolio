@@ -2,6 +2,7 @@ import Link from 'next/link';
 import SVGCurveBottom from '../SVGCurveBottom';
 import { RxGithubLogo } from 'react-icons/rx';
 import { FaCopyright } from 'react-icons/fa';
+import ViewResume from '../ViewResume';
 
 const Footer = () => {
   return (
@@ -14,6 +15,10 @@ const Footer = () => {
       >
         <div className="flex items-center">
           <FaCopyright /> <p className="pl-1">Roger Dornelles</p>
+        </div>
+
+        <div>
+          <ViewResume />
         </div>
 
         <div>
